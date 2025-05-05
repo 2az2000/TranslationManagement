@@ -25,7 +25,7 @@ export default function Dashboard() {
     item.keyword.toLowerCase().includes(search.toLowerCase())
   );
 
-  // نمایش پیغام با sweetalert2
+ 
   const showAlert = (title, text, icon) => {
     Swal.fire({
       title,
@@ -35,7 +35,6 @@ export default function Dashboard() {
     });
   };
 
-  // افزودن واژه جدید
   const handleAddKeyword = (keyword = newKeyword.trim()) => {
     if (!keyword) {
       showAlert("خطا!", "لطفاً یک واژه وارد کنید!", "error");
@@ -64,7 +63,6 @@ export default function Dashboard() {
     showAlert("موفقیت!", "واژه با موفقیت اضافه شد!", "success");
   };
 
-  // نمایش مودال برای افزودن واژه در موبایل
   const showAddKeywordModal = () => {
     Swal.fire({
       title: "افزودن واژه جدید",
@@ -167,7 +165,6 @@ export default function Dashboard() {
       className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 p-4 md:p-6 pb-20 md:pb-6"
     >
       <div className="max-w-4xl mx-auto">
-        {/* هدر */}
         <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mb-4 md:mb-6 transition-all duration-300">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
             <div className="flex items-center gap-2 md:gap-3">
@@ -230,7 +227,7 @@ export default function Dashboard() {
             animate="visible"
             className="space-y-3 md:space-y-4 overflow-y-auto flex-1"
             style={{
-              maxHeight: 'calc(100vh - 300px)', // ارتفاع را تنظیم کنید
+              maxHeight: 'calc(100vh - 300px)',
               scrollbarWidth: 'thin',
               scrollbarColor: '#3b82f6 #f1f5f9',
             }}
